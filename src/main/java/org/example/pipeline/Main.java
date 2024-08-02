@@ -41,7 +41,7 @@ public class Main {
             });
 
             // Step 4: Output Data
-            Future<Void> outputFuture = executorService.submit(() -> {
+            Future<Void> outputFuture = executorService.submit(() -> { 
                 String aggregatedData = aggregationFuture.get();
                 Output output = new FileOutput(outputFilePath);
                 output.outputData(aggregatedData);
